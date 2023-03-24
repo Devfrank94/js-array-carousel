@@ -39,3 +39,31 @@ body{
   object-fit: cover;
   border-radius: 20px;
 }
+
+.slider .btn-arrow{
+  position: absolute;
+  background-color: #BEB6B5;
+  text-align: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 27px;
+  right: 50%;
+  cursor: pointer;
+}
+
+.slider .btn-arrow.top{
+  top: 10px;
+}
+.slider .btn-arrow.down{
+  bottom: 10px;
+}
+
+.slider .btn-arrow:hover{
+  color: red;
+  background-color: white;
+}
+
+.slider .item{
+  display: none;
+}
