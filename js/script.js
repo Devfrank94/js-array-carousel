@@ -33,3 +33,23 @@ for(let i = 0; i < imagesArray.length; i++){
 const items = document.getElementsByClassName('item');
 items[counterImage].classList.remove('hide');
 
+// Creo evento pulsante Next (down arrow)
+btnNext.addEventListener('click', function(){
+
+items[counterImage].classList.add('hide');
+
+counterImage++;
+items[counterImage].classList.remove('hide');
+
+});
+
+// Creo evento pulsante Prev (Up arrow)
+btnPrev.addEventListener('click', function(){
+
+items[counterImage].classList.add('hide');
+
+counterImage--;
+items[counterImage].classList.remove('hide');
+
+});
+
