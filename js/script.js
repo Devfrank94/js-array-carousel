@@ -6,7 +6,7 @@ const imagesArray = [
   'img/03.webp',
   'img/04.webp',
   'img/05.webp',
-]
+];
 
 
 const itemsWrapper = document.querySelector('.items-wrapper');
@@ -33,23 +33,37 @@ for(let i = 0; i < imagesArray.length; i++){
 const items = document.getElementsByClassName('item');
 items[counterImage].classList.remove('hide');
 
+btnPrev.classList.add('hide');
+
 // Creo evento pulsante Next (down arrow)
 btnNext.addEventListener('click', function(){
 
-items[counterImage].classList.add('hide');
+  items[counterImage].classList.add('hide');
 
-counterImage++;
-items[counterImage].classList.remove('hide');
+  counterImage++;
+  items[counterImage].classList.remove('hide');
+
+  btnPrev.classList.remove('hide');
+
+  if(counterImage === imagesArray.length - 1){
+    btnNext.classList.add('hide');
+  }
 
 });
 
 // Creo evento pulsante Prev (Up arrow)
 btnPrev.addEventListener('click', function(){
 
-items[counterImage].classList.add('hide');
+  items[counterImage].classList.add('hide');
 
-counterImage--;
-items[counterImage].classList.remove('hide');
+  counterImage--;
+  items[counterImage].classList.remove('hide');
+
+  btnNext.classList.remove('hide');
+  
+  if(counterImage === 0){
+    btnPrev.classList.add('hide');
+  }
 
 });
 
